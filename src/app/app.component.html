@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+<nav class="navbar navbar-light bg-primary">
+ <div class="container-fluid">
+   <h1>EMPLOYEE</h1>
+   <div class="d-flex">
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Data</button>
+   </div>
+ </div>
+</nav>
+<table class="table">
+ <thead>
+   <tr>
+     <th scope="col">Name</th>
+     <th scope="col">Designation</th>
+     <th scope="col">Salary</th>
+     <th scope="col">Action</th>
+   </tr>
+ </thead>
+ <tbody>
+   <Tr>
+     <td>Deepsikha</td>
+     <td>Manager</td>
+     <td>$50000</td>
+     <td>
+       <button class="btn btn-info">Edit</button>
+       <button class="btn btn-danger">Delete</button>
+     </td>
+   </Tr>
+ </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+        <div class="mb-3">
+          <label for="exampleInputPassword" class="form-lable">Name</label>
+          <input type="text" formControlName="name" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword" class="form-lable">Salary</label>
+          <input type="text" formControlName="salary" class="form-control" id="salary">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword" class="form-lable">Designation</label>
+          <input type="text" formControlName="designation" class="form-control" id="designation">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="onsave()">Save </button>
+      </div>
+    </div>
+  </div>
+</div>
